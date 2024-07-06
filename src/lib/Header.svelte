@@ -14,7 +14,7 @@ import {scrollY} from  '../assets/js/data'
       <div class="wrapper">
         <a href={"#"} class="logo">
           <img
-            src={gambar.logo}
+            src={gambar.logoNav}
             width="162"
             height="50"
             alt="UTC logo"

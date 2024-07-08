@@ -1,7 +1,13 @@
 <script>
-  import * as gambar from '../assets/images'
-  import * as datas from '../assets/js/data'
+  import * as gambar from "../assets/images";
+  import { 
+    categories,
+    fasilitas,
+    infoPMB,
+    kampus,
+} from "../assets/js/data";
 </script>
+
 <main>
   <article>
     <!-- 
@@ -86,54 +92,62 @@
         <p class="section-text">Program Sarjana (S1)</p>
 
         <ul class="grid-list">
-          {#each datas.categories[0] as item}
-          <li>
-            <div class="category-card" style:--color="{item.color[0]}, {item.color[1]}%, {item.color[2]}%">
-              <div class="card-icon">
-                <img
-                  src={item.img}
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                  alt={item.title}
-                  class="img"
-                />
+          {#each categories[0] as item}
+            <li>
+              <div
+                class="category-card"
+                style:--color="{item.color[0]}, {item.color[1]}%, {item
+                  .color[2]}%"
+              >
+                <div class="card-icon">
+                  <img
+                    src={item.img}
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    alt={item.title}
+                    class="img"
+                  />
+                </div>
+
+                <h3 class="h3">
+                  <a href={"#"} class="card-title">{item.title}</a>
+                </h3>
+
+                <p class="card-text">{item.desc}</p>
               </div>
-
-              <h3 class="h3">
-                <a href={"#"} class="card-title">{item.title}</a>
-              </h3>
-
-              <p class="card-text">{item.desc}</p>
-            </div>
-          </li>
+            </li>
           {/each}
         </ul>
-        
+
         <p class="section-text">Program Diploma (D3)</p>
-        
+
         <ul class="grid-list">
-          {#each datas.categories[1] as item}
-          <li>
-            <div class="category-card" style:--color="{item.color[0]}, {item.color[1]}%, {item.color[2]}%">
-              <div class="card-icon">
-                <img
-                  src={item.img}
-                  width="40"
-                  height="40"
-                  loading="lazy"
-                  alt={item.title}
-                  class="img"
-                />
+          {#each categories[1] as item}
+            <li>
+              <div
+                class="category-card"
+                style:--color="{item.color[0]}, {item.color[1]}%, {item
+                  .color[2]}%"
+              >
+                <div class="card-icon">
+                  <img
+                    src={item.img}
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    alt={item.title}
+                    class="img"
+                  />
+                </div>
+
+                <h3 class="h3">
+                  <a href={"#"} class="card-title">{item.title}</a>
+                </h3>
+
+                <p class="card-text">{item.desc}</p>
               </div>
-  
-              <h3 class="h3">
-                <a href={"#"} class="card-title">{item.title}</a>
-              </h3>
-  
-              <p class="card-text">{item.desc}</p>
-            </div>
-          </li>
+            </li>
           {/each}
         </ul>
       </div>
@@ -289,31 +303,32 @@
         <h2 class="h2 section-title">Nikmati fasilitas yang tersedia</h2>
 
         <ul class="grid-list">
-          {#each Object.entries(datas.fasilitas) as [index, item]}
-          <li>
-            <div class="course-card">
-              <figure
-                class="card-banner img-holder"
-                style:--width="370" style:--height="220"
-              >
-                <img
-                  src={item.img}
-                  width="370"
-                  height="220"
-                  loading="lazy"
-                  alt="Build Responsive Real- World Websites with HTML and CSS"
-                  class="img-cover"
-                />
-              </figure>
-              <div class="card-content">
-                <span class="badge">{item.title}</span>
+          {#each Object.entries(fasilitas) as [index, item]}
+            <li>
+              <div class="course-card">
+                <figure
+                  class="card-banner img-holder"
+                  style:--width="370"
+                  style:--height="220"
+                >
+                  <img
+                    src={item.img}
+                    width="370"
+                    height="220"
+                    loading="lazy"
+                    alt="Build Responsive Real- World Websites with HTML and CSS"
+                    class="img-cover"
+                  />
+                </figure>
+                <div class="card-content">
+                  <span class="badge">{item.title}</span>
 
-                <h3 class="h3">
-                  <a href={"#"} class="card-title-fasilitas">{item.desc}</a>
-                </h3>
+                  <h3 class="h3">
+                    <a href={"#"} class="card-title-fasilitas">{item.desc}</a>
+                  </h3>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
           {/each}
         </ul>
 
@@ -333,22 +348,22 @@
         <p class="section-subtitle">Info PMB</p>
         <h2 class="h2 section-title">Informasi seputar PMB</h2>
         <ul class="grid-list">
-          {#each datas.infoPMB as item}
-          <li style:padding-top="100px">
-            <div class="blog-card">
-              <div class="card-content">
-                <a href={"#"} class="card-btn" aria-label="read more">
-                  <ion-icon name="arrow-forward-outline" aria-hidden="true"
-                  ></ion-icon>
-                </a>
-                <h3 class="h3">
-                  <a href={"#"} class="card-title">
-                    {item}
+          {#each infoPMB as item}
+            <li style:padding-top="100px">
+              <div class="blog-card">
+                <div class="card-content">
+                  <a href={"#"} class="card-btn" aria-label="read more">
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"
+                    ></ion-icon>
                   </a>
-                </h3>
+                  <h3 class="h3">
+                    <a href={"#"} class="card-title">
+                      {item}
+                    </a>
+                  </h3>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
           {/each}
         </ul>
         <a href={"#"} class="btn-second has-before">
@@ -370,8 +385,8 @@
         <div class="video-card">
           <div
             class="video-banner img-holder has-after"
-            style:width=" " style:height=" "
-          >
+            style:--width=" "
+            style:--height=" ">
             <img
               src={gambar.videoBanner}
               width="970"
@@ -423,39 +438,39 @@
         <h2 class="h2 section-title">Cabang Kampus</h2>
 
         <ul class="grid-list">
-          {#each Object.entries(datas.kampus) as [index, item]}
-            
-          <li>
-            <div class="blog-card">
-              <figure
-                class="card-banner img-holder has-after"
-                style:--width="370" style:--height="370"
-              >
-                <img
-                  src={item.img}
-                  width="370"
-                  height="370"
-                  loading="lazy"
-                  alt="Become A Better Blogger: Content Planning"
-                  class="img-cover"
-                />
-              </figure>
+          {#each Object.entries(kampus) as [index, item]}
+            <li>
+              <div class="blog-card">
+                <figure
+                  class="card-banner img-holder has-after"
+                  style:--width="370"
+                  style:--height="370"
+                >
+                  <img
+                    src={item.img}
+                    width="370"
+                    height="370"
+                    loading="lazy"
+                    alt="Become A Better Blogger: Content Planning"
+                    class="img-cover"
+                  />
+                </figure>
 
-              <div class="card-content">
-                <a href={"#"} class="card-btn" aria-label="read more">
-                  <ion-icon name="arrow-forward-outline" aria-hidden="true"
-                  ></ion-icon>
-                </a>
+                <div class="card-content">
+                  <a href={"#"} class="card-btn" aria-label="read more">
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"
+                    ></ion-icon>
+                  </a>
 
-                <a href={"#"} class="card-subtitle">{item.title}</a>
+                  <a href={"#"} class="card-subtitle">{item.title}</a>
 
-                <h3 class="h3">
-                  <a href={"#"} class="card-title">{item.alamat}</a>
-                </h3>
-                <p class="card-text">{item.telp}</p>
+                  <h3 class="h3">
+                    <a href={"#"} class="card-title">{item.alamat}</a>
+                  </h3>
+                  <p class="card-text">{item.telp}</p>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
           {/each}
         </ul>
 

@@ -1,10 +1,11 @@
 <script>
 import * as gambar from "../assets/images";
+import {navLinks} from '../assets/js/data'
 let active = false;
-import {scrollY} from  '../assets/js/data'
+export let scrollY
 </script>
 
-<header class="header {$scrollY > 100 ? 'active' : ''}" data-header>
+<header class="header" class:active={scrollY > 100} data-header>
   <div class="container">
     <a href={"#"} class="logo">
       <img src={gambar.logoNav} alt="UTC logo" />
@@ -26,25 +27,11 @@ import {scrollY} from  '../assets/js/data'
         </button>
       </div>
       <ul class="navbar-list">
-        <li class="navbar-item">
-          <a href="#home" class="navbar-link" data-nav-link>Beranda</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#jenjang" class="navbar-link" data-nav-link>Jenjang</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#why" class="navbar-link" data-nav-link>Mengapa UTC</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#fasilitas" class="navbar-link" data-nav-link>Fasilitas</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#info" class="navbar-link" data-nav-link>Info</a>
-        </li>
+        {#each navLinks as item}
+          <li class="navbar-item">
+            <a href={`#${item.href}`} class="navbar-link" data-nav-link on:click={() => active = !active}>{item.title}</a>
+          </li>
+        {/each}
       </ul>
     </nav>
 
@@ -63,6 +50,6 @@ import {scrollY} from  '../assets/js/data'
       </button>
     </div>
 
-    <div class="overlay" data-nav-toggler data-overlay class:active={active} on:click={() => active = !active} ></div>
+    <button class="overlay" data-nav-toggler data-overlay class:active={active} on:click={() => active = !active} ></button>
   </div>
 </header>

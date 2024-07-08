@@ -10,8 +10,8 @@
 
     <section
       class="section hero has-bg-image"
-      id="home"
-      aria-label="home"
+      id="beranda"
+      aria-label="beranda"
       style:background-image="url({gambar.heroBg})"
     >
       <div class="container">
@@ -146,7 +146,7 @@
     <section class="section about" id="why" aria-label="about">
       <div class="container">
         <figure class="about-banner">
-          <div class="img-holder" style:width="520" style:height="370">
+          <div class="img-holder" style:--width="520" style:--height="370">
             <img
               src={gambar.aboutBanner}
               width="520"
@@ -332,9 +332,9 @@
       <div class="container">
         <p class="section-subtitle">Info PMB</p>
         <h2 class="h2 section-title">Informasi seputar PMB</h2>
-        <ul class="grid-list" style:padding-top="90px">
+        <ul class="grid-list">
           {#each datas.infoPMB as item}
-          <li>
+          <li style:padding-top="100px">
             <div class="blog-card">
               <div class="card-content">
                 <a href={"#"} class="card-btn" aria-label="read more">
@@ -415,7 +415,7 @@
       class="section blog has-bg-image"
       id="blog"
       aria-label="blog"
-      style:background-image="url('./assets/images/blog-bg.svg')"
+      style:background-image="url({gambar.blogBg})"
     >
       <div class="container">
         <p class="section-subtitle">Kampus</p>
@@ -429,7 +429,7 @@
             <div class="blog-card">
               <figure
                 class="card-banner img-holder has-after"
-                style:width="370" style:height="370"
+                style:--width="370" style:--height="370"
               >
                 <img
                   src={item.img}

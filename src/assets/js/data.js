@@ -1,6 +1,4 @@
 import * as dataGambar from "../images";
-import {writable} from 'svelte/store'
-export const scrollY = writable()
 
 const fasilitasInfos = [
   {
@@ -78,7 +76,7 @@ export const categories = categoriesInfos.map((data, index) => (
       color: categoriesInfos[index][i].color
     }
   ))
-  )
+)
 )
 
 const kampusInfos = [
@@ -111,4 +109,27 @@ export const infoPMB = [
   'Ketentuan Dan Berkas PMB Universitas Amikom Yogyakarta T.A 2024/2025',
   'Ketentuan Dan Berkas PMB Universitas Amikom Yogyakarta T.A 2024/2025',
   'Ketentuan Dan Berkas PMB Universitas Amikom Yogyakarta T.A 2024/2025',
+]
+
+export const navLinks = [
+  {
+    title: "Beranda",
+    href: "beranda"
+  },
+  {
+    title: "Jenjang",
+    href: "jenjang",
+  },
+  {
+    title: "Mengapa UTC",
+    href: "why",
+  },
+  {
+    title: "Fasilitas",
+    href: "fasilitas",
+  },
+  {
+    title: "Info",
+    href: "info",
+  },
 ]

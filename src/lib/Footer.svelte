@@ -2,10 +2,7 @@
   import * as gambar from '../assets/images'
 </script>
 
-<footer
-  class="footer"
-  style="background-image: url('./assets/images/footer-bg.png')"
->
+<footer class="footer" >
   <div class="footer-top section">
     <div class="container grid-list">
       <div class="footer-brand">
@@ -143,7 +140,7 @@
   <div class="footer-bottom">
     <div class="container">
       <p class="copyright">
-        Copyright 2023 Universitas Sains dan Teknologi Condongcatur
+        Copyright 2023 Universitas Teknologi Condongcatur
       </p>
     </div>
   </div>

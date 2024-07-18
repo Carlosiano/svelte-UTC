@@ -1012,12 +1012,20 @@ body {
   transition: var(--transition-1);
 }
 
+
 .back-top-btn.active {
   transform: translateY(10px);
   opacity: 1;
   pointer-events: all;
 }
 
+.ion-icon {
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  height: 1em;
+  width: 1em;
+}
 
 
 

@@ -1,5 +1,5 @@
 <script>
-  import * as gambar from '../assets/images'
+  import * as gambar from '../assets/images/index' 
 </script>
 
 <footer class="footer" >
@@ -96,9 +96,7 @@
 
           <button type="submit" class="btn has-before">
             <span class="span">Kirim</span>
-
-            <ion-icon name="arrow-forward-outline" aria-hidden="true"
-            ></ion-icon>
+            <div class="ion-icon" style="mask-image: url({gambar.arrowForwardOutline});" aria-hidden="true"></div>
           </button>
         </form>
 

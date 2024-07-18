@@ -1,11 +1,10 @@
-<script>
+<script lang="ts">
   import * as gambar from './assets/images'
-
   import Header from './lib/Header.svelte';
   import Main from './lib/Main.svelte';
   import Footer from './lib/Footer.svelte';
 
-  let scrollY
+  let scrollY: number
 
 </script>
 
@@ -37,10 +36,9 @@
       data-back-top-btn
 
     >
-      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+       <div class="ion-icon" style="mask-image: url({gambar.chevronUp});" aria-hidden="true"></div>
     </a>
 
     <style>
 
     </style>
-

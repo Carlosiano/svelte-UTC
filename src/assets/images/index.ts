@@ -19,6 +19,8 @@ export { default as videoShape2 } from "./video-shape-2.png"
 export { default as videoBanner } from "./video-banner.jpg"
 export { default as blogShape } from "./blog-shape.png"
 export { default as blogBg } from "./blog-bg.svg"
+export { default as chevronUp } from "./ion-icons/chevron-up.svg"
+export { default as arrowForwardOutline } from "./ion-icons/arrow-forward-outline.svg"
 
 // Kampus images
 export const kampusImages = Object.values(

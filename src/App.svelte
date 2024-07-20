@@ -1,5 +1,5 @@
 <script lang="ts">
-  import * as gambar from './assets/images'
+  import { chevronUp } from './assets/images';
   import {Header, Main, Footer} from './lib'
 
   let scrollY: number
@@ -8,13 +8,6 @@
 
 <svelte:window bind:scrollY={scrollY} />
 
-<svelte:head>
-    <link rel="preload" as="image" href={gambar.heroBg} />
-    <link rel="preload" as="image" href={gambar.heroBanner1} />
-    <link rel="preload" as="image" href={gambar.heroBanner2} />
-    <link rel="preload" as="image" href={gambar.heroShape1} />
-    <link rel="preload" as="image" href={gambar.heroShape2} />
-</svelte:head>
   <Header {scrollY}/>
 
   <Main />
@@ -34,7 +27,7 @@
       data-back-top-btn
 
     >
-       <div class="ion-icon" style="mask-image: url({gambar.chevronUp});" aria-hidden="true"></div>
+       <div class="ion-icon" style="mask-image: url({chevronUp});" aria-hidden="true"></div>
     </a>
 
     <style>

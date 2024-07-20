@@ -103,31 +103,31 @@
         <ul class="social-list">
           <li>
             <a href={"#"} class="social-link">
-              <div class="ion-icon" style="mask-image: url({logoFacebook});" aria-hidden="true"></div>
+              <div class="ion-icon" style="mask-image: url({logoFacebook});"></div>
             </a>
           </li>
           
           <li>
             <a href={"#"} class="social-link">
-              <div class="ion-icon" style="mask-image: url({logoLinkedin});" aria-hidden="true"></div>
+              <div class="ion-icon" style="mask-image: url({logoLinkedin});"></div>
             </a>
           </li>
           
           <li>
             <a href={"#"} class="social-link">
-              <div class="ion-icon" style="mask-image: url({logoInstagram});" aria-hidden="true"></div>
+              <div class="ion-icon" style="mask-image: url({logoInstagram});"></div>
             </a>
           </li>
           
           <li>
             <a href={"#"} class="social-link">
-              <div class="ion-icon" style="mask-image: url({logoTwitter});" aria-hidden="true"></div>
+              <div class="ion-icon" style="mask-image: url({logoTwitter});"></div>
             </a>
           </li>
           
           <li>
             <a href={"#"} class="social-link">
-              <div class="ion-icon" style="mask-image: url({logoYoutube});" aria-hidden="true"></div>
+              <div class="ion-icon" style="mask-image: url({logoYoutube});"></div>
             </a>
           </li>
         </ul>

@@ -1,11 +1,6 @@
-<script>
-  import * as gambar from "../assets/images";
-  import { 
-    categories,
-    fasilitas,
-    infoPMB,
-    kampus,
-} from "../assets/js/data";
+<script lang="ts">
+import  {heroBg, heroBanner1, heroBanner2, heroShape2, aboutBanner, aboutShape1, aboutShape2, aboutShape3, aboutShape4, videoBg, videoBanner, videoShape1, videoShape2, blogBg, blogShape, arrowForwardOutline, checkmarkDoneOutline, play } from "../assets/images";
+import {categories,fasilitas,infoPMB,kampus, alasanKuliah } from "../assets/js/data";
 </script>
 
 <main>
@@ -18,7 +13,7 @@
       class="section hero has-bg-image"
       id="beranda"
       aria-label="beranda"
-      style:background-image="url({gambar.heroBg})"
+      style:background-image="url({heroBg})"
     >
       <div class="container">
         <div class="hero-content">
@@ -39,8 +34,8 @@
             <a href={"#"} class="btn-second has-before">
               <span class="span">Panduan PMB</span>
 
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"
-              ></ion-icon>
+
+        <div class="ion-icon" style="mask-image: url({arrowForwardOutline});" aria-hidden="true"></div>
             </a>
           </div>
         </div>
@@ -48,7 +43,7 @@
         <figure class="hero-banner">
           <div class="img-holder one" style:--width="270" style:--height="300">
             <img
-              src={gambar.heroBanner1}
+              src={heroBanner1}
               width="270"
               height="300"
               alt="hero banner"
@@ -58,7 +53,7 @@
 
           <div class="img-holder two" style:--width="240" style:--height="370">
             <img
-              src={gambar.heroBanner2}
+              src={heroBanner2}
               width="240"
               height="370"
               alt="hero banner"
@@ -67,7 +62,7 @@
           </div>
 
           <img
-            src={gambar.heroShape2}
+            src={heroShape2}
             width="622"
             height="551"
             alt=""
@@ -162,7 +157,7 @@
         <figure class="about-banner">
           <div class="img-holder" style:--width="520" style:--height="370">
             <img
-              src={gambar.aboutBanner}
+              src={aboutBanner}
               width="520"
               height="370"
               loading="lazy"
@@ -172,7 +167,7 @@
           </div>
 
           <img
-            src={gambar.aboutShape1}
+            src={aboutShape1}
             width="360"
             height="420"
             loading="lazy"
@@ -181,7 +176,7 @@
           />
 
           <img
-            src={gambar.aboutShape2}
+            src={aboutShape2}
             width="371"
             height="220"
             loading="lazy"
@@ -190,7 +185,7 @@
           />
 
           <img
-            src={gambar.aboutShape3}
+            src={aboutShape3}
             width="722"
             height="528"
             loading="lazy"
@@ -209,79 +204,22 @@
           <p class="section-text"></p>
 
           <ul class="about-list">
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span"
-                >Peluang magang dan bekerja di Silicon Valley dan Hollywood</span
-              >
-            </li>
-
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span">
-                Perguruan Tingggi Terbaik di Indonesia pada Industrial
-                Application (WURI, 2023).
-              </span>
-            </li>
-
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span">
-                Model Perguruan Tinggi Private Entrepreneur Dunia oleh UNESCO
-              </span>
-            </li>
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span">
-                Alumni mudah mendapat pekerjaan (Employbility bintang 5 dari QS
-                Stars 2019)
-              </span>
-            </li>
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span">
-                Ditargetkan 30 % mahasiswa menjadi entrepreneur.
-              </span>
-            </li>
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span">
-                Menghasilkan produk berkualitas dunia dalam bidang film animasi,
-                game dan ICT
-              </span>
-            </li>
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span">
-                Memperoleh lebih dari 80 penghargaan internasional
-              </span>
-            </li>
-            <li class="about-item">
-              <ion-icon name="checkmark-done-outline" aria-hidden="true"
-              ></ion-icon>
-
-              <span class="span">
-                Memiliki sertifikasi ISO 9001 Quality Managemen
-              </span>
-            </li>
+            {#each alasanKuliah as item}
+                  <li class="about-item">
+                    <div
+                      class="ion-icon"
+                      style="mask-image: url({checkmarkDoneOutline})"
+                      aria-hidden="true"
+                    ></div>
+                    <span class="span">
+                      {item}
+                    </span>
+                  </li>
+            {/each}
           </ul>
 
           <img
-            src={gambar.aboutShape4}
+            src={aboutShape4}
             width="100"
             height="100"
             loading="lazy"
@@ -334,7 +272,8 @@
 
         <a href={"#"} class="btn has-before">
           <span class="span">Lihat lebih banyak</span>
-          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+
+              <div class="ion-icon" style="mask-image: url({arrowForwardOutline});" aria-hidden="true"></div>
         </a>
       </div>
     </section>
@@ -353,8 +292,8 @@
               <div class="blog-card">
                 <div class="card-content">
                   <a href={"#"} class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"
-                    ></ion-icon>
+
+              <div class="ion-icon" style="mask-image: url({arrowForwardOutline});" aria-hidden="true"></div>
                   </a>
                   <h3 class="h3">
                     <a href={"#"} class="card-title">
@@ -367,7 +306,8 @@
           {/each}
         </ul>
         <a href={"#"} class="btn-second has-before">
-          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+
+              <div class="ion-icon" style="mask-image: url({arrowForwardOutline});" aria-hidden="true"></div>
         </a>
       </div>
     </section>
@@ -379,7 +319,7 @@
     <section
       class="video has-bg-image"
       aria-label="video"
-      style:background-image="url({gambar.videoBg})"
+      style:background-image="url({videoBg})"
     >
       <div class="container">
         <div class="video-card">
@@ -388,7 +328,7 @@
             style:--width=" "
             style:--height=" ">
             <img
-              src={gambar.videoBanner}
+              src={videoBanner}
               width="970"
               height="550"
               loading="lazy"
@@ -397,12 +337,12 @@
             />
 
             <button class="play-btn" aria-label="play video">
-              <ion-icon name="play" aria-hidden="true"></ion-icon>
+              <div class="ion-icon" style="mask-image: url({play});" aria-hidden="true"></div>
             </button>
           </div>
 
           <img
-            src={gambar.videoShape1}
+            src={videoShape1}
             width="1089"
             height="605"
             loading="lazy"
@@ -411,7 +351,7 @@
           />
 
           <img
-            src={gambar.videoShape2}
+            src={videoShape2}
             width="158"
             height="174"
             loading="lazy"
@@ -430,7 +370,7 @@
       class="section blog has-bg-image"
       id="blog"
       aria-label="blog"
-      style:background-image="url({gambar.blogBg})"
+      style:background-image="url({blogBg})"
     >
       <div class="container">
         <p class="section-subtitle">Kampus</p>
@@ -458,8 +398,8 @@
 
                 <div class="card-content">
                   <a href={"#"} class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"
-                    ></ion-icon>
+
+              <div class="ion-icon" style="mask-image: url({arrowForwardOutline});" aria-hidden="true"></div>
                   </a>
 
                   <a href={"#"} class="card-subtitle">{item.title}</a>
@@ -475,7 +415,7 @@
         </ul>
 
         <img
-          src={gambar.blogShape}
+          src={blogShape}
           width="186"
           height="186"
           loading="lazy"

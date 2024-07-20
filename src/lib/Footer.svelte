@@ -1,14 +1,14 @@
 <script>
-  import * as gambar from '../assets/images/index' 
+  import {arrowForwardOutline, footerBg, logoFacebook, logoFooter, logoInstagram, logoLinkedin, logoTwitter, logoYoutube} from "../assets/images";
 </script>
 
-<footer class="footer" >
+<footer class="footer" style="background-image: url({footerBg})" >
   <div class="footer-top section">
     <div class="container grid-list">
       <div class="footer-brand">
         <a href={"#"} class="logo">
           <img
-            src={gambar.logoFooter}
+            src={logoFooter}
             width="162"
             height="50"
             alt="UTC logo"
@@ -96,38 +96,38 @@
 
           <button type="submit" class="btn has-before">
             <span class="span">Kirim</span>
-            <div class="ion-icon" style="mask-image: url({gambar.arrowForwardOutline});" aria-hidden="true"></div>
+            <div class="ion-icon" style="mask-image: url({arrowForwardOutline});" aria-hidden="true"></div>
           </button>
         </form>
 
         <ul class="social-list">
           <li>
             <a href={"#"} class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+              <div class="ion-icon" style="mask-image: url({logoFacebook});" aria-hidden="true"></div>
             </a>
           </li>
-
+          
           <li>
             <a href={"#"} class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
+              <div class="ion-icon" style="mask-image: url({logoLinkedin});" aria-hidden="true"></div>
             </a>
           </li>
-
+          
           <li>
             <a href={"#"} class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+              <div class="ion-icon" style="mask-image: url({logoInstagram});" aria-hidden="true"></div>
             </a>
           </li>
-
+          
           <li>
             <a href={"#"} class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+              <div class="ion-icon" style="mask-image: url({logoTwitter});" aria-hidden="true"></div>
             </a>
           </li>
-
+          
           <li>
             <a href={"#"} class="social-link">
-              <ion-icon name="logo-youtube"></ion-icon>
+              <div class="ion-icon" style="mask-image: url({logoYoutube});" aria-hidden="true"></div>
             </a>
           </li>
         </ul>
@@ -138,7 +138,7 @@
   <div class="footer-bottom">
     <div class="container">
       <p class="copyright">
-        Copyright 2023 Universitas Teknologi Condongcatur
+        Copyright 2023 Universitas Teknologi
       </p>
     </div>
   </div>

@@ -121,7 +121,7 @@ span,
 data,
 input,
 button,
-ion-icon { display: block; }
+.ion-icon { display: block; }
 
 a {
   color: inherit;
@@ -141,7 +141,7 @@ input { width: 100%; }
 
 button { cursor: pointer; }
 
-ion-icon { pointer-events: none; }
+.ion-icon { pointer-events: none; }
 
 address { font-style: normal; }
 
@@ -596,7 +596,7 @@ body {
   gap: 15px;
 }
 
-.about-item ion-icon {
+.about-item .ion-icon {
   color: var(--selective-yellow);
   font-size: 20px;
   --ionicon-stroke-width: 50px;
@@ -647,7 +647,7 @@ body {
   padding-block-end: 3px;
 }
 
-.course-card .abs-badge ion-icon {
+.course-card .abs-badge .ion-icon {
   font-size: 18px;
   margin-block-end: 5px;
   --ionicon-stroke-width: 50px;
@@ -689,7 +689,7 @@ body {
 
 .course-card .rating-wrapper { gap: 3px; }
 
-.course-card .rating-wrapper ion-icon { color: var(--selective-yellow); }
+.course-card .rating-wrapper .ion-icon { color: var(--selective-yellow); }
 
 .course-card .rating-text {
   color: var(--eerie-black-1);
@@ -719,7 +719,7 @@ body {
   padding-inline: 10px;
 }
 
-.course-card .card-meta-item ion-icon {
+.course-card .card-meta-item .ion-icon {
   color: var(--quick-silver);
   --ionicon-stroke-width: 50px;
 }
@@ -903,7 +903,7 @@ body {
   color: var(--eerie-black-1);
 }
 
-.blog-card .card-meta-item ion-icon {
+.blog-card .card-meta-item .ion-icon {
   color: var(--kappel);
   font-size: 18px;
   --ionicon-stroke-width: 40px;

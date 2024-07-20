@@ -1,8 +1,6 @@
 <script lang="ts">
   import * as gambar from './assets/images'
-  import Header from './lib/Header.svelte';
-  import Main from './lib/Main.svelte';
-  import Footer from './lib/Footer.svelte';
+  import {Header, Main, Footer} from './lib'
 
   let scrollY: number
 
